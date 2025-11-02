@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="editor-header">
+            <a href="index.html" class="back-btn">&larr; К списку книг</a>
+            <h1 contenteditable="true">Новая книга</h1>
+        </header>
+        <main>
+            <textarea id="text-editor" placeholder="Нажмите на кнопку ниже, чтобы начать диктовку..."></textarea>
+            <div id="record-controls">
+                <button id="record-btn" class="btn-record">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+                    <span>Начать запись</span>
+                </button>
+            </div>
+            <div id="suggestions" class="suggestions-container is-hidden">
+                <button class="btn-suggestion" data-action="cleanup">Убрать запинки и паузы</button>
+                <button class="btn-suggestion" data-action="grammar">Исправить грамматику</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>
